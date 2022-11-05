@@ -25,18 +25,18 @@
 							<div class="form-feedback__basis">
 								<div class="form-feedback__field">
 									<label class="form-feedback__label" for="firstName">First Name*</label>
-									<input class="form-feedback__input" id="firstName" name="firstName"
+									<input required class="form-feedback__input" id="firstName" name="firstName"
 										placeholder="Your first name" type="text">
 								</div>
 								<div class="form-feedback__field">
 									<label class="form-feedback__label" for="lastName">Last Name*</label>
-									<input class="form-feedback__input" id="lastName" name="lastName"
+									<input required class="form-feedback__input" id="lastName" name="lastName"
 										placeholder="Your last name" type="text">
 								</div>
 								<div class="form-feedback__field">
 									<label class="form-feedback__label" for="mail">Email*</label>
-									<input class="form-feedback__input" id="mail" name="mail" placeholder="Your working email"
-										type="email">
+									<input required class="form-feedback__input" id="mail" name="mail"
+										placeholder="Your working email" type="email">
 								</div>
 								<div class="form-feedback__field">
 									<label class="form-feedback__label" for="phone">Phone</label>
@@ -45,7 +45,7 @@
 								</div>
 								<div class="form-feedback__field">
 									<label class="form-feedback__label" for="message">Message*</label>
-									<textarea class="form-feedback__textform" id="message" name="message"
+									<textarea required class="form-feedback__textform" id="message" name="message"
 										placeholder="Your message"></textarea>
 								</div>
 							</div>
@@ -86,23 +86,28 @@
 					<label for="file">Choose file</label>
 					<input id="file" accept="image/png, image/jpg" class="block__input" name="file" type="file">
 				</div>
+
 				<div class="block">
-					<label for="checkbox">Mouse</label>
-					<input id="checkbox" required class="block__input block__input--chk" name="mouse" type="checkbox">
+					<input class="block__check" id="checkbox" required class="block__input block__input--chk" name="mouse"
+						type="checkbox">
+					<label class="block__label" for="checkbox">Mouse</label>
 				</div>
 				<div class="block">
-					<label for="checkbox2">Keyboard</label>
-					<input id="checkbox2" class="block__input block__input--chk" name="keyboard" type="checkbox">
+					<input class="block__check2" id="checkbox2" class="block__input block__input--chk" name="keyboard"
+						type="checkbox">
+					<label class="block__label2" for="checkbox2"><span>Keyboard</span></label>
 				</div>
 				<div class="block">
-					<label for="car">Choose car</label>
-					<input id="car" class="block__input block__input--radio" name="vehicle" value="car" type="radio">
-				</div>
-				<div class="block">
-					<label for="board">Choose board</label>
-					<input checked id="board" class="block__input block__input--radio" name="vehicle" value="board"
+					<input class="block__radio" id="car" class="block__input block__input--radio" name="vehicle" value="car"
 						type="radio">
+					<label class="block__r-l" for="car"><span>Choose car</span></label>
 				</div>
+				<div class="block">
+					<input class="block__radio" checked id="board" class="block__input block__input--radio" name="vehicle"
+						value="board" type="radio">
+					<label class="block__r-l" for="board"><span>Choose board</span></label>
+				</div>
+
 				<textarea name="message" id="textarea"></textarea>
 				<select class="select" name="myChoice" id="select">
 					<option class="select__option" value="banana">banana</option>
